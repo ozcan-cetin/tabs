@@ -1,20 +1,31 @@
-import React from 'react'
+import React from "react";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
-const Experience = ({info, value}) => {
-    const{title, company, dates, duties} = info[value]
-    // if(info){
-    //     return(
-            // const {id, title} = info
-    //     )
-    // }
+const Experience = ({ info, value }) => {
+  const { title, company, dates, duties } = info[value];
+  // if(info){
+  //     return(
+  // const {id, title} = info
+  //     )
+  // }
   return (
     <div>
-       <h1>{title}</h1>
-       <h1>{company}</h1>
-       <h1>{dates}</h1>
-       <p>{duties}</p>
-    </div>
-  )
-}
+      <h2>{title}</h2>
+      <h5 className="company p-1 rounded-1">{company}</h5>
+      <p className="fw-bold">{dates}</p>
 
-export default Experience
+      <ul className="p-0">
+        {duties.map((duty) => (
+          <li className="duty mb-2">
+            <span className="me-1 text-primary">
+              <FaAngleDoubleRight />
+            </span>
+            {duty}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Experience;

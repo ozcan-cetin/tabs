@@ -1,3 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: aquamarine !important;
+}
+
 .title{
   font-size:3rem;
   font-weight: bold;
@@ -6,4 +16,40 @@
 .underline{
   border-bottom: 5px solid;
   width: 8rem;
+}
+
+.duty{
+  list-style: none;
+}
+
+.company{
+  background-color: #dae2ec;
+  width: fit-content;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem !important;
+}
+
+.brd{
+  /* border-bottom: 1px solid gray; */
+  border-left: 1px solid rgb(17, 14, 211);
+}
+
+button:hover{
+  border-left: 1px solid rgb(17, 14, 211);
+}
+
+@media (max-width: 769px) {
+  .brd{
+    border:none;
+    border-bottom: 1px solid rgb(17, 14, 211);
+  }
+  
+  button:hover{
+    border:none;
+    border-bottom: 1px solid rgb(17, 14, 211);
+  }
 }

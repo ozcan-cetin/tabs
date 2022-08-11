@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-// import { FaAngleDoubleRight } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Company from "./components/Company";
 import Experience from "./components/Experience";
@@ -43,12 +42,14 @@ const [value, setValue] = useState(0)
         <h1 className="text-center mt-5 title">Experience</h1>
         <div className="underline text-info mx-auto rounded-3"></div>
       </div>
-      <div className="box">
+      <div className="box container d-md-flex flex-xs-column justify-content-center">
       <Company list={list} value={value} setValue={setValue}/>
       <Experience info={list} value={value}/>
       
     </div>
-      {/* <h1>{list.map((item)=>item.id===list[value].id)}</h1> */}
+    <div className="text-center">
+      <button className="btn btn-info py-0 px-2">MORE INFO</button>
+    </div>
     </div>
   );
 }
